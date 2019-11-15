@@ -31,3 +31,25 @@ There are two tests in the test project; one simple search for red shirts out of
 We would like you to send us a link to a git repository that we can access with your implementation.
 
 The whole exercise should not take more than an hour to implement.
+
+## Solution Notes
+The strategy employed in this solution is a simple linear search and the default implementation uses linq. Two other implementations were written in an effort to boost performance, one does the search in parallel, the other avoids using linq. However, as can be seen by the results below the parallel implementation significantly reduced performance and the non linq implementation showed little or no improvement over the default.
+
+N.B. The two methods AssertSizeCounts/AssertColorCounts in SearchEngineTestsBase have been updatd to properly reflect the search criteria. 
+
+## Performance
+Performance was tested with the release build configuration using an average of 5 runs and a 4 core machine.
+
+#Linq Implementation (Search(...))
+
+5000 Shirts: 94ms
+10,000,000 14.5s
+
+#Linq Parallel Implementation (SearchParallel(...))
+
+5000 Shirts: 144ms
+10,000,000 16.4s
+
+#Non Linq Implementation (SearchWithoutLinq(...))
+5000 Shirts: 93ms
+10,000,000 14.8s
