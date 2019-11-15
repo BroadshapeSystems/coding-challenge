@@ -42,14 +42,14 @@ Performance was tested with the release build configuration using an average of 
 
 ### Linq Implementation (Search(...))
 
-5000 Shirts: 94ms
-10,000,000 14.5s
+5000 Shirts: 94ms  
+10,000,000: 14.5s
 
 ### Linq Parallel Implementation (SearchParallel(...))
 
-5000 Shirts: 144ms
-10,000,000 16.4s
+5000 Shirts: 144ms  
+10,000,000: 16.4s
 
 ### Non Linq Implementation (SearchWithoutLinq(...))
-5000 Shirts: 93ms
-10,000,000 14.8s
+5000 Shirts: 93ms  
+10,000,000: 14.8s
